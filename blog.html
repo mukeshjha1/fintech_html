@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Vyrono Blog - Latest news, tips, and insights on web development, mobile apps, and technology">
+    <title>Blog | Vyrono Solutions</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .blog-image {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        .blog-content {
+            padding: 24px;
+        }
+
+        .blog-category {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(230, 57, 70, 0.1);
+            color: #e63946;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .blog-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+        }
+
+        .blog-card p {
+            color: #6b7280;
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+        }
+
+        .blog-meta {
+            display: flex;
+            justify-content: space-between;
+            color: #9ca3af;
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 1024px) {
+            .blog-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-info"><span>📞 +91 9876543210</span><span>✉️ info@Vyrono.com</span></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo"><span class="logo-icon">V</span><span class="logo-text">Vyrono</span></a>
+                        <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+
+                <!-- Services Mega Menu -->
+                <li class="has-mega-menu">
+                    <a href="services.html">Services <span class="arrow">▼</span></a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-container">
+                            <div class="mega-menu-column">
+                                <h4><a href="services/web-development.html">Web Development</a></h4>
+                                <ul>
+                                    <li><a href="services/responsive-design.html">Responsive Website Design</a></li>
+                                    <li><a href="services/wordpress-development.html">WordPress Development</a></li>
+                                    <li><a href="services/custom-web-development.html">Custom Web Development</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu-column">
+                                <h4><a href="services/mobile-app-development.html">Mobile App Development</a></h4>
+                                <ul>
+                                    <li><a href="services/android-development.html">Android App Development</a></li>
+                                    <li><a href="services/ios-development.html">iOS App Development</a></li>
+                                    <li><a href="services/flutter-development.html">Flutter Development</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu-column">
+                                <h4><a href="services/ecommerce-development.html">E-Commerce Development</a></h4>
+                                <ul>
+                                    <li><a href="services/shopify-development.html">Shopify Development</a></li>
+                                    <li><a href="services/woocommerce-development.html">WooCommerce Development</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu-column">
+                                <h4><a href="services/digital-marketing.html">Digital Marketing</a></h4>
+                                <ul>
+                                    <li><a href="services/seo-services.html">SEO Services</a></li>
+                                    <li><a href="services/social-media-marketing.html">Social Media Marketing</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu-column">
+                                <h4><a href="services/hire-developers.html">Hire Developers</a></h4>
+                                <ul>
+                                    <li><a href="services/hire-php-developers.html">Hire PHP Developers</a></li>
+                                    <li><a href="services/hire-react-developers.html">Hire React Developers</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- About Dropdown -->
+                <li class="has-dropdown">
+                    <a href="about.html">About Us <span class="arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html">Company Overview</a></li>
+                        <li><a href="why-us.html">Why Choose Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <a href="contact.html" class="nav-cta">Get Quote</a>
+            <button class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Blog</h1>
+            <p>Latest news, tips, and insights on technology and development</p>
+            <div class="breadcrumb"><a href="index.html">Home</a> / <span>Blog</span></div>
+        </div>
+    </section>
+
+    <section class="services-section">
+        <div class="container">
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image" style="background: linear-gradient(135deg, #6366f1, #8b5cf6);">🌐</div>
+                    <div class="blog-content">
+                        <span class="blog-category">Web Development</span>
+                        <h3>Top 10 Web Development Trends to Watch in 2026</h3>
+                        <p>Explore the latest trends shaping the future of web development...</p>
+                        <div class="blog-meta"><span>Jan 10, 2026</span><span>5 min read</span></div>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-image" style="background: linear-gradient(135deg, #0ea5e9, #06b6d4);">📱</div>
+                    <div class="blog-content">
+                        <span class="blog-category">Mobile Apps</span>
+                        <h3>React Native vs Flutter: Which One to Choose?</h3>
+                        <p>A comprehensive comparison of two popular cross-platform frameworks...</p>
+                        <div class="blog-meta"><span>Jan 8, 2026</span><span>7 min read</span></div>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-image" style="background: linear-gradient(135deg, #10b981, #059669);">🔍</div>
+                    <div class="blog-content">
+                        <span class="blog-category">SEO</span>
+                        <h3>SEO Best Practices for 2026: A Complete Guide</h3>
+                        <p>Learn the latest SEO strategies to rank higher on search engines...</p>
+                        <div class="blog-meta"><span>Jan 5, 2026</span><span>10 min read</span></div>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-image" style="background: linear-gradient(135deg, #f43f5e, #e11d48);">🛒</div>
+                    <div class="blog-content">
+                        <span class="blog-category">E-Commerce</span>
+                        <h3>How to Build a Successful E-Commerce Store</h3>
+                        <p>Essential tips for launching and growing your online store...</p>
+                        <div class="blog-meta"><span>Jan 3, 2026</span><span>8 min read</span></div>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-image" style="background: linear-gradient(135deg, #f59e0b, #d97706);">💡</div>
+                    <div class="blog-content">
+                        <span class="blog-category">Technology</span>
+                        <h3>The Rise of AI in Software Development</h3>
+                        <p>How artificial intelligence is transforming the way we build software...</p>
+                        <div class="blog-meta"><span>Dec 28, 2025</span><span>6 min read</span></div>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-image" style="background: linear-gradient(135deg, #8b5cf6, #a855f7);">☁️</div>
+                    <div class="blog-content">
+                        <span class="blog-category">Cloud</span>
+                        <h3>AWS vs Azure vs Google Cloud: Which is Best?</h3>
+                        <p>A detailed comparison of the top cloud platforms...</p>
+                        <div class="blog-meta"><span>Dec 25, 2025</span><span>9 min read</span></div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Get the latest updates delivered to your inbox.</p>
+                <div class="cta-buttons"><a href="contact.html" class="btn btn-white">Subscribe Now</a></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Vyrono Solutions. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
+
+
+
